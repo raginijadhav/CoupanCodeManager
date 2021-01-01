@@ -22,11 +22,14 @@ function addCoupan() {
     getInput();
   }
   else{
-    var val = readlineSync.question('Enter value of coupan : ', cpn);
-    coupans.push({ cpn : val });
+    var val = readlineSync.question('Enter value of coupan : ',cpn);
+    var key = cpn;
+    var obj = {};
+    obj[key] = val;
+    coupans.push(obj);
   }
   getInput();
-}4
+}
 
 function deleteCoupan(){
   var cpn = readlineSync.question('Enter coupan to be deleted : ');
